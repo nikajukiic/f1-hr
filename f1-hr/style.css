@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e10600;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: #e10600;
+}
+
+/* HERO */
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  background-color: #e10600;
+  color: white;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  opacity: 0.9;
+}
+
+
+/* NEWS SECTION */
+.news {
+  padding: 80px 40px;
+  background-color: #0f0f0f;
+}
+
+.news h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.news-card {
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+}
+
+.news-card img {
+  width: 100%;
+  display: block;
+}
+
+.news-card h3 {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.news-card p {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin: 0 20px 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Mobitel */
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
